@@ -1,0 +1,133 @@
+/*
+ * Mobile version (also IE) first
+*/
+
+// Generic
+body {
+}
+
+footer ul {
+  list-style: none; 
+}
+footer p {
+  font-size: .8em; 
+}
+
+#siteheaderbanner { 
+  background-image: url(/grfx/tiles/pattern_022.gif);
+  border-bottom: 1px solid black;
+  margin-bottom: 2em;
+}
+#bottom {
+  border-top: 1px solid black;
+}
+#siteheader h1 {
+  font-size: 1.8em; 
+  padding: .3em 0; 
+}
+
+#siteheader, #maincontent, #forms, #sitefooter, #examples, #featuresbenefits { 
+	.row();
+	.width(6);
+}
+
+.samplehtml, .samplecss { .col(); }
+
+// Typography
+
+
+
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+
+.ie {
+
+}
+
+
+// 800 and below
+@media screen and (max-width: 49.999em) {
+	body {
+		font-size: (@font-size - 2)/@em;
+	}
+}
+
+@media screen and (max-width: 115em) {
+	#basicexample, #responsiveexample { .row() }
+}
+
+// 800 and up
+@media screen and (min-width: 50em) {
+	#siteheader, #maincontent, #forms, #sitefooter, #featuresbenefits, #examples, #basicexample, #responsiveexample { .width(8); }
+
+	/* Index */
+	#theory, #opendawsis, #opendawsisnt, #benefits, #features { .col(); }
+	#opendawsisnt, #features { .gutter(); }
+
+	.samplehtml, .samplecss {.width(4); }
+	.samplecss { .gutter(); }
+
+	/* Demo */
+	#type, #elements, #inputslabels, #textboxes { .col(); }
+
+	#elements, #textboxes { margin-left: @line-height*1px; }
+}
+
+
+// 800 to 1600 
+@media screen and (min-width: 50em)  and (max-width: 86em) {
+	#siteheader, #maincontent, #forms, #sitefooter, #featuresbenefits, #examples, #basicexample, #responsiveexample { .width(12); }
+
+	/* Index */
+	#theory { .width(12); }
+	#opendawsis, #opendawsisnt, #benefits, #features { .width(6); }
+	.samplehtml, .samplecss { .width(6); }
+
+	/* Demo */
+	#type, #elements, #inputslabels, #textboxes  { .width(6); }
+}
+
+@media screen and (min-width: 86em) and (max-width: 115em) {
+	
+
+	#siteheader, #maincontent, #forms, #sitefooter, #featuresbenefits, #examples, #basicexample, #responsiveexample { .width(18); }
+
+	/* Index */
+	#theory, #opendawsis, #opendawsisnt { .width(6); }
+	#opendawsis { .gutter(); }
+
+	#benefits, #features { .width(9); }
+	
+	.samplehtml, .samplecss { .width(9); }
+
+	
+	/* Demo */
+	#type, #elements, #inputslabels, #textboxes  { .width(9); }
+}
+
+@media screen and (min-width: 115em) {
+	body {
+		font-size: (@font-size + 2)/@em;
+	}
+
+	
+
+	#siteheader, #maincontent, #forms, #sitefooter, #featuresbenefits, #examples { .width(21); }
+	#basicexample, #responsiveexample { .col(); .width(10.5); }
+	#responsiveexample { .gutter() }
+
+	/* Index */
+	#theory, #opendawsis, #opendawsisnt { .width(7); }
+	#opendawsis { .gutter(); }
+
+	#benefits, #features { .width(10.5); }
+	
+	.samplehtml, .samplecss { .width(4.5); }
+	.samplecss { .gutter() }
+
+	
+	/* Demo */
+	#type, #elements, #inputslabels, #textboxes  { .width(9); }
+}

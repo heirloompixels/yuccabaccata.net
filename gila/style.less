@@ -1,0 +1,143 @@
+/*
+ * Mobile version (also IE) first
+*/
+
+// Generic
+#siteheaders {
+  background-image: url("/assets/whiteTile.jpg"); 
+}
+#bio, #whoplays, #siteheader, #maincontent, #forms, #sitefooter, #examples, #featuresbenefits { 
+	.row();
+	.width(6);
+}
+
+#sitefooter {
+  margin-top: 13em; 
+}
+.samplehtml, .samplecss { .col(); }
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Typography
+
+
+
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+
+.ie {
+
+}
+
+
+// 800 and below
+@media screen and (max-width: 49.999em) {
+	body {
+		font-size: (@font-size - 2)/@em;
+	}
+}
+
+@media screen and (max-width: 115em) {
+	#basicexample, #responsiveexample { .row() }
+}
+
+// 800 and up
+@media screen and (min-width: 50em) {
+	#bio, #whoplays, #maincontent, #forms, #sitefooter, #featuresbenefits, #examples, #basicexample, #responsiveexample { .width(8); }
+
+  #siteheader {
+    .width(4); 
+  }
+
+	/* Index */
+	#theory, #opendawsis, #opendawsisnt, #benefits, #features { .col(); }
+	#opendawsisnt, #features { .gutter(); }
+
+	.samplehtml, .samplecss {.width(4); }
+	.samplecss { .gutter(); }
+
+	/* Demo */
+  #whoplays, #bio {margin-top: 13em; }
+ 
+	#whoplays section, #montana, #pitch, #contact, #about, #type, #elements, #inputslabels, #textboxes { .col(); }
+  #contact, #players, #montana{ .gutter(); }
+	#elements, #textboxes { margin-left: @line-height*1px; }
+  #guitars1 { margin-top: 500px; }
+}
+
+
+// 800 to 1600 
+@media screen and (min-width: 50em)  and (max-width: 86em) {
+	#bio, #whoplays, #maincontent, #forms, #sitefooter, #featuresbenefits, #examples, #basicexample, #responsiveexample { .width(12); }
+
+  #siteheader {
+    .width(6); 
+  }
+	/* Index */
+	#theory { .width(12); }
+	#opendawsis, #opendawsisnt, #benefits, #features { .width(6); }
+	.samplehtml, .samplecss { .width(6); }
+
+	/* Demo */
+	#whoplays section, #pitch, #montana, #contact, #about,  #type, #elements, #inputslabels, #textboxes  { .width(6); }
+}
+
+@media screen and (min-width: 86em) and (max-width: 115em) {
+	
+
+	#bio, #whoplays, #siteheader, #maincontent, #forms, #sitefooter, #featuresbenefits, #examples, #basicexample, #responsiveexample { .width(18); }
+
+	/* Index */
+	#theory, #opendawsis, #opendawsisnt { .width(6); }
+	#opendawsis { .gutter(); }
+
+	#benefits, #features { .width(9); }
+	
+	.samplehtml, .samplecss { .width(9); }
+
+	
+	/* Demo */
+	#whoplays section, #pitch, #montana, #contact, #about, #type, #elements, #inputslabels, #textboxes  { .width(9); }
+}
+
+@media screen and (min-width: 115em) {
+	body {
+		font-size: (@font-size + 2)/@em;
+	}
+
+	
+
+	#bio, #whoplays, #siteheader, #maincontent, #forms, #sitefooter, #featuresbenefits, #examples { .width(21); }
+	#basicexample, #responsiveexample { .col(); .width(10.5); }
+	#responsiveexample { .gutter() }
+
+	/* Index */
+	#theory, #opendawsis, #opendawsisnt { .width(7); }
+	#opendawsis { .gutter(); }
+
+	#benefits, #features { .width(10.5); }
+	
+	.samplehtml, .samplecss { .width(4.5); }
+	.samplecss { .gutter() }
+
+	
+	/* Demo */
+	#whoplays section, #pitch, #montana, #contact, #bio, #type, #elements, #inputslabels, #textboxes  { .width(9); }
+}
